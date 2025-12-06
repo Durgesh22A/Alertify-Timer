@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Alertify Timer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpeg" href="countdown fevicon.jpg">
+
+</head>
+
+<body>
+    <div class="app">
+        <h1>Countdown Timer ⏱️</h1>
+
+        <p class="subtitle">
+            Enter seconds, start the timer, and get a notification + sound when it ends.
+        </p>
+
+        <div class="status-bar">
+            <span id="notificationStatus">Notifications: Not requested</span>
+        </div>
+
+        <div class="timer-card">
+            <label for="secondsInput">Enter time (in seconds):</label>
+            <input type="number" id="secondsInput" min="1" placeholder="e.g. 30" />
+
+            <div class="buttons">
+                <button id="enableNotificationsBtn" class="secondary">
+                    Enable Notifications
+                </button>
+                <button id="startBtn">Start</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="resetBtn" disabled>Reset</button>
+            </div>
+
+            <div class="display">
+                <span id="timeDisplay">00:00</span>
+            </div>
+
+            <p id="message" class="message"></p>
+        </div>
+
+        <footer>
+            <small>Uses Notification API, Audio API &amp; setInterval() in JavaScript.</small>
+        </footer>
+    </div>
+
+    <!-- Alarm sound (put a file named "ding.mp3" in the same folder) -->
+    <audio id="alarmSound" src="ding.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
